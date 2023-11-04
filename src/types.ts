@@ -65,7 +65,7 @@ export type SendMessageBrowserOptions = {
 export interface ChatMessage {
   id: string
   text: string
-  parts: any
+  parts?: any
   role: Role
   name?: string
   delta?: string
