@@ -211,6 +211,8 @@ export class ChatGPTUnofficialProxyAPI {
 
                 if (text) {
                   result.text = text
+                  result.parts = message?.content?.parts
+
 
                   if (onProgress) {
                     onProgress(result)
