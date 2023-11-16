@@ -1,6 +1,6 @@
 {
   "name": "yhh_chatgpt",
-  "version": "5.2.6",
+  "version": "5.2.7",
   "description": "Node.js client for the official ChatGPT API.",
   "author": "yhhit",
   "repository": "yhhit/chatgpt-api",
