@@ -208,11 +208,30 @@ export class ChatGPTUnofficialProxyAPI {
 
               if (message) {
                 let text = message?.content?.parts?.[0]
-
+                if (
+                  message?.metadata?.aggregate_result?.status &&
+                  message.metadata.aggregate_result.status === 'success'
+                ) {
+                  let images =
+                    message.metadata.aggregate_result.messages.filter((mes) => {
+                      return mes.message_type === 'image'
+                    })
+                  images = images.map((image) => {
+                    return {
+                      height: image.height,
+                      width: image.width,
+                      asset_pointer: image.image_url,
+                      fovea: 0
+                    }
+                  })
+                  if (images.length > 0) result.parts = images
+                  if (onProgress) {
+                    onProgress(result)
+                  }
+                }
                 if (text) {
                   result.text = text
                   result.parts = message?.content?.parts
-
 
                   if (onProgress) {
                     onProgress(result)
