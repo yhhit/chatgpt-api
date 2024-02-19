@@ -1,6 +1,6 @@
 {
   "name": "yhh_chatgpt",
-  "version": "5.2.8",
+  "version": "5.2.9",
   "description": "Node.js client for the official ChatGPT API.",
   "author": "yhhit",
   "repository": "yhhit/chatgpt-api",
@@ -45,6 +45,7 @@
     "p-timeout": "^6.1.1",
     "quick-lru": "^6.1.1",
     "read-pkg-up": "^9.1.0",
+    "tiktoken": "^1.0.13",
     "uuid": "^9.0.0"
   },
   "devDependencies": {

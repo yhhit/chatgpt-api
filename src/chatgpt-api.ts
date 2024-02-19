@@ -7,6 +7,7 @@ import * as tokenizer from './tokenizer'
 import * as types from './types'
 import { fetch as globalFetch } from './fetch'
 import { fetchSSE } from './fetch-sse'
+import { calTokens } from './tokenizer'
 
 const CHATGPT_MODEL = 'gpt-3.5-turbo'
 
@@ -452,7 +453,7 @@ export class ChatGPTAPI {
     // TODO: use a better fix in the tokenizer
     text = text.replace(/<\|endoftext\|>/g, '')
 
-    return tokenizer.encode(text).length
+    return calTokens(text)
   }
 
   protected async _defaultGetMessageById(

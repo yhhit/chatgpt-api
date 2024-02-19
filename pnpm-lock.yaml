@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   cac:
     specifier: ^6.7.14
@@ -25,6 +29,9 @@ dependencies:
   read-pkg-up:
     specifier: ^9.1.0
     version: 9.1.0
+  tiktoken:
+    specifier: ^1.0.13
+    version: 1.0.13
   uuid:
     specifier: ^9.0.0
     version: 9.0.0
@@ -2871,6 +2878,10 @@ packages:
   /through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
     dev: true
+
+  /tiktoken@1.0.13:
+    resolution: {integrity: sha512-JaL9ZnvTbGFMDIBeGdVkLt4qWTeCPw+n7Ock+wceAGRenuHA6nOOvMJFliNDyXsjg2osGKJWsXtO2xc74VxyDw==}
+    dev: false
 
   /to-fast-properties@2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}

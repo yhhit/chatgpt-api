@@ -1,8 +1,12 @@
-import { getEncoding } from 'js-tiktoken'
+import { get_encoding } from 'tiktoken'
 
-// TODO: make this configurable
-const tokenizer = getEncoding('cl100k_base')
+function calTokens(text: string) {
+  const encoding = get_encoding('cl100k_base')
+  const tokens = encoding.encode(text)
+  const num_tokens = tokens.length
+  encoding.free()
 
-export function encode(input: string): Uint32Array {
-  return new Uint32Array(tokenizer.encode(input))
+  return num_tokens
 }
+
+export { calTokens }
